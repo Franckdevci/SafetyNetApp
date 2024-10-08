@@ -11,7 +11,7 @@ public interface FireStationService {
     void addFireStation (FireStationDTO firestationDTO);
     void updateFireStation(FireStationDTO firestationDTO);
     void deleteFireStation(String address);
-
     FireStationCoverageDTO getCoverageByStationNumber(int stationNumber);
+
 }
 
