@@ -1,2 +1,14 @@
-package com.safetynetalerts.safetynet.dto;public class FirestationDTO {
+package com.safetynetalerts.safetynet.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class FireStationDTO {
+    private String address;
+    private String station;
+
 }

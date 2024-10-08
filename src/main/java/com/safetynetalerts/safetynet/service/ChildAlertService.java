@@ -1,4 +1,10 @@
-package com.safetynetalerts.safetynet.repository;
+package com.safetynetalerts.safetynet.service;
+
+import java.util.List;
+import com.safetynetalerts.safetynet.dto.ChildAlertDTO;
 
 public interface ChildAlertService {
+
+    List<ChildAlertDTO> getChildrenByAddress(String address);
+
 }
