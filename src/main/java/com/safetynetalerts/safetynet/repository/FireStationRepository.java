@@ -7,6 +7,6 @@ import java.util.List;
 public interface FireStationRepository {
 
     List<FireStation> getAllFireStations();
-    void saveAllFireStations(List<FireStation> firestations);
+    void saveAllFireStations(List<FireStation> fireStations);
 
 }
