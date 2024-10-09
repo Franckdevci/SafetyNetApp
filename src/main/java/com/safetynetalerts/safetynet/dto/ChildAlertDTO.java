@@ -4,6 +4,13 @@ import java.util.List;
 
 import lombok.Data;
 
+/**
+ * Provide the results of URL "/childAlert"
+ *
+ * @author Franck Armel
+ *
+ */
+
 @Data
 public class ChildAlertDTO {
 
