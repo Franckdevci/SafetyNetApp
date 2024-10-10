@@ -14,18 +14,25 @@ import com.safetynetalerts.safetynet.service.ChildAlertService;
 
 @RestController
 @RequestMapping("/childAlert")
+
+/**
+ * Class ChildAlertController
+ * @param  address Children By Address
+ * @return a responseEntity containing a list of ChildAlertDTO object
+ *
+ * @author Kesse Franck
+ */
 public class ChildAlertController {
+
 
     @Autowired
     private ChildAlertService childAlertService;
 
-    /**
-     * @param address
-     * @return a responseEntity containing a list of ChildAlertDTO objects
-     */
+
     @GetMapping
     public ResponseEntity<List<ChildAlertDTO>> getChildrenByAddress(@RequestParam("address") String address) {
         List<ChildAlertDTO> children = childAlertService.getChildrenByAddress(address);
         return ResponseEntity.ok(children);
     }
+
 }
