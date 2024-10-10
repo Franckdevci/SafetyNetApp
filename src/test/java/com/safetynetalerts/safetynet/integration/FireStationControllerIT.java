@@ -27,7 +27,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.safetynetalerts.safetynet.dto.FireStationCoverageDTO;
 import com.safetynetalerts.safetynet.dto.FireStationDTO;
 import com.safetynetalerts.safetynet.dto.FireStationPersonDTO;
-import com.safetynetalerts.safetynet.service.FireStationService;
+
 
 @SpringBootTest
 @AutoConfigureMockMvc

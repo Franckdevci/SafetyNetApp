@@ -47,12 +47,14 @@ public class ChildAlertServiceImpl implements ChildAlertService {
 
         List<ChildAlertDTO> children = personsAtSameAddress.stream().map(person -> {
                     MedicalRecord medicalRecord = medicalRecordRepository.getMedicalRecord(person.getFirstName(), person.getLastName());
+
                     int age = getAge(medicalRecord.getBirthdate());
                     if (age <= 18) {
                         ChildAlertDTO childAlertDTO = new ChildAlertDTO();
                         childAlertDTO.setFirstName(person.getFirstName());
                         childAlertDTO.setLastName(person.getLastName());
                         childAlertDTO.setAge(age);
+
                         List<HouseHoldMemberDTO> householdMembers = personsAtSameAddress.stream()
                                 .filter(member -> !member.equals(person))
                                 .map(member -> {
